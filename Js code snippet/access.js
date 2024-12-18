@@ -1,3 +1,4 @@
+// async function //
 function login () {
     var user = prompt("Enter Name");
     var key = prompt("Enter key");
