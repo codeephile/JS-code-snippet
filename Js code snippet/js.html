@@ -1,0 +1,70 @@
+// function person1(){
+    
+//     return new Promise((resolve, reject) => {
+        
+//         setTimeout(() => {
+
+//             const greeting = true;
+//             if(greeting){
+//                 resolve("This is Alice");
+//             } else{
+//                 reject("Greeting first!");
+//             }
+//         }, 1500);
+//     })
+// }
+// function person2(){
+
+//     return new Promise((resolve, reject) => {
+
+//         setTimeout(() => {
+
+//             const greeting = true;
+//             if(greeting){
+//                 resolve("This is Lewis");
+//             } else{
+//                 reject("Greeting first!");
+//             }
+//         }, 2000);
+//     })
+// }
+// function person3(){
+
+//     return new Promise((resolve, reject) => {
+     
+//         setTimeout(() => {
+
+//             const greeting = true;
+//             if(greeting){
+//                 resolve("This is Johnson");
+//             } else{
+//                 reject("Greeting first!");
+//             }
+//         }, 2000);
+//     })
+// }
+// async function doGreeting(){
+
+//     const person1Result = await person1();
+//     const display = "Alice";
+//     console.log(display);
+//     document.getElementById("log").innerHTML = `<div class="log">${display}</div>`;
+
+//     const person2Result = await person1();
+//     const display2 = "Lewis";
+//     console.log(display2);
+//     document.getElementById("log").innerHTML = `<div class="log">${display2}</div>`;
+
+//     const person3Result = await person1();
+//     const display3 = "Johnson";
+//     console.log(display3);
+//     document.getElementById("log").innerHTML = `<div class="log">${display3}</div>`;
+
+//     setTimeout(() => {
+//         const message = "Hi Everyone!";
+//     console.log(message);
+//     document.getElementById("log").innerHTML = `<div class="log">${message}</div>`;
+//     }, 2000); //this is showing without johnson
+// }
+
+// doGreeting();
