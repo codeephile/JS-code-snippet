@@ -38,7 +38,7 @@ async function doTask(){
     }
 }
 doTask();
-
+-------------------------------------------------
 
 // while loop //
 var logged = false;
@@ -69,3 +69,50 @@ const countAuto = () => {
     setTimeout(countAuto, 1200);
 }
 countAuto();
+-----------------------------------------------
+
+// random check //
+var logged = false;
+var user;
+var type;
+var key;
+var count = 5;
+var prizes = [
+    'Iphone 16 pro', '$1000', '$5000', '$100', 'Bike',
+    'RobotToy', 'BunnyToy', '50% discount',
+    'Shopping Mall $100 cupon', 'SkateBoard'
+]
+var prizeChecked = false;
+const login = () => {
+    user = prompt("Fill your name");
+    type = prompt("Your occupation");
+    key = prompt("Fill your pin");
+    if(user && type && key){
+        logged = true;
+        console.log("Accessed");
+    } else{
+        console.log("Access Denied");
+    }
+    check();
+}
+
+const check = () => {
+    if(logged){
+        if(!prizeChecked){
+            console.log("Let me check your prize");
+            prizeChecked = true;
+        }
+        if(prizeCheck = true){
+            console.log("Count: ", count);
+            count--;
+        }
+        
+        if(count === 0){
+            var randomPrize = prizes[Math.floor(Math.random() * prizes.length)];
+            alert(`Congratulation! You won ${randomPrize}`);
+            return;
+        }
+        setTimeout(check, 1200);
+    }
+}
+login();
