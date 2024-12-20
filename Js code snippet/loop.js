@@ -1,16 +1,3 @@
-// forEach html //
-var username = ['alice', 'lewis', 'katy', 'david', 'johnson'];
-var country = ['us', 'canada', 'japan', 'korea', 'russia'];
-let delay = 0;
-username.forEach((name, index) => {
-    delay += 1200;
-    setTimeout(() => {
-        const user = `Welcome ${name}, you are from ${country[index]}<br/>`;
-        document.getElementById('users').innerHTML += user;
-    }, delay);
-});
-
----------------------------------------------------------
 // forEach //
 let user = ['alice', 'lewis'];
 let key = [1001, 1002];
@@ -37,7 +24,7 @@ function users(name, town){
     }, 3000);
 }
 
-
+---------------------------------------------------
 // for string type //
 var user = ['alice', 'johnson','lewis', 'katy', 'kira'];
 
