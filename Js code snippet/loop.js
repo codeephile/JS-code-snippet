@@ -36,3 +36,30 @@ function users(name, town){
         console.log(`Welcome ${name}, You are from ${town}`);
     }, 3000);
 }
+
+
+// for string type //
+var user = ['alice', 'johnson','lewis', 'katy', 'kira'];
+
+for(let i = 0; i < user.length; i++){
+
+    setTimeout(() => {
+        if(user[i] === 'lewis'){
+            return; 
+        }else{
+            console.log(user[i]);
+        }
+    }, 1200);
+}
+
+var fruit = ['apple', 'orange', 'grape', 'pineapple'];
+
+fruit.forEach((name, index) => {
+    setTimeout(() => {
+        if(name === 'grape'){
+            return;
+        } else{
+            console.log(name);
+        }
+    }, index * 1200); 
+});
