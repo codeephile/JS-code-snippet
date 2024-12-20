@@ -1,4 +1,4 @@
-// forEach //
+// forEach // forEachLoop
 let user = ['alice', 'lewis'];
 let key = [1001, 1002];
 let delay = 0;
@@ -10,7 +10,7 @@ user.forEach((name, index) => {
   }, delay);
 });
 
-// for all //
+// for all // forEachLoop
 var username = ['alice', 'lewis', 'johnson'];
 var city = ['seoul', 'us', 'tokyo'];
 
@@ -50,3 +50,22 @@ fruit.forEach((name, index) => {
         }
     }, index * 1200); 
 });
+
+-------------------------------------------------
+// course note //
+// for(let i = 10; i > 0; i--){ //i -= 2 #even 
+//     console.log(i);
+// }
+// console.log("Hello!");
+
+// for(let i = 1; i <= 20; i++){
+//     if(i == 13){
+//         continue;  //this will remove 13 and continue to 20
+//         //break; // this will break before 13
+//     }else{
+//         console.log(i);
+//     }
+// }
+
+  ---------------------------------------------------
+  
