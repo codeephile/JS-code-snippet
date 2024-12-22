@@ -84,3 +84,5 @@
 
 // const total = product1.calculateTotal(saleTax); //product2, product3 etc...
 // console.log(`Total price(with tax) is $${total.toFixed(2)}`);
+
+-----------------------------------------------
