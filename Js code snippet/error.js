@@ -91,3 +91,71 @@
 //*** try: Contains code that may throw an error.
 // catch: Catches and handles errors that occur in the try block.
 // finally: A block that executes regardless of whether an error occurred. ****/
+
+---------------------------------------------------------------------
+// examples //
+// console.log(x);
+// console.log("Program executed!");
+
+
+// using try catch handling for upper code error //
+// try{
+//     console.log(x);
+// }catch(error){
+//     console.log(error); //console.error(error);
+// }
+// console.log("program executed!");
+
+---------------------------------------------
+// finally //
+// try{
+//     console.log(x); 
+//     //Network Error
+//     //Promise rejection
+//     //Security errors
+// }catch(error){
+//     console.error(error);
+// }
+// finally{
+//     //Close Files
+//     //Close Connections
+//     //Release Resources
+//     console.log("Finally always executes")
+// }
+// console.log("Program ended!");
+
+--------------------------------------------------
+//throw new error //
+// try{
+//     const divide = prompt("Enter Numer");
+//     const divisor = prompt("Enter Number");
+
+//     if(divisor == 0 ){
+//         throw new Error("You cannot divide by zero");
+//     }
+//     const result = divide / divisor;
+//     console.log(result);
+// }
+// catch(error){
+//     console.error(error);
+// }
+
+// console.log("Program ended!");
+// e,g 2 //
+
+// try{
+//     let num1 = Number(prompt("Enter num"));
+//     let num2 = Number(prompt("Enter num"));
+//     if(num2 == 0){
+//         throw new Error("You cannot divided by zero");
+//     }
+//     if(isNaN(num1) || isNaN(num2)){
+//         throw new Error("Must be Number!!!");
+//     }
+//     var result = num1 / num2;
+//     console.log(result);
+// }catch(error){
+//     console.error(error);
+// }
+
+// console.log("Program Ended!");
