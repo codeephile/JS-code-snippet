@@ -159,3 +159,23 @@
 // }
 
 // console.log("Program Ended!");
+
+-------------------------------------------------------
+// userinput error //
+// var user;
+// var password;
+
+// const hello = () => {
+//     try{
+//         user = prompt("Enter username");
+//         password = prompt("Enter password");
+
+//         if(!user || !password){
+//             throw new Error("username and password must be required");
+//         }
+//         console.log(`Hello ${user}`);
+//     } catch(error){
+//         console.error("Error:", error.message);
+//     }
+// }
+// hello();
