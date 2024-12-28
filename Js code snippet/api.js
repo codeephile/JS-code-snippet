@@ -1,4 +1,12 @@
-// fetch api // syntax
+//api fetch async/callback //
+
+// function fetchData(url, options) {
+//   // options can be an object containing headers, method, etc.
+// }
+// fetchData("https://api.example.com", { method: "GET", headers: { "Content-Type": "application/json" } });
+
+-----------------------------------------------------
+// fetch api // syntax //
 // fetch('http//www.example.com/api/')
 //     .then(res => res.json())
 //     .then(data => console.log(data))
@@ -19,8 +27,7 @@
 //         console.log(data); //this is parsed json to display javascript//
 //     }); 
 
-
-//------------------------------------------------------//
+------------------------------------------------------
 // simple api (get)// .then() //
 
 // const apiUrl = 'https://fakestoreapi.com/products';
@@ -58,7 +65,7 @@
 
 
 
-//-----------------------------------//
+------------------------------------------------------
 // POST (create) //
 
 const api = 'https://api.escuelajs.co/api/v1/users/';
@@ -125,6 +132,6 @@ fetch(`${deleteApi}${userId}`, {
     });
 
 
-//-------------------------------------------------//
+-----------------------------------------------------
 // simple api (get) // await
 
