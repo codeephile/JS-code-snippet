@@ -175,5 +175,90 @@ fetch(api + userId, {
         console.error('Error: ', error.message)
     });
 -----------------------------------------------------
-// simple api (get) // await
+// simple api (get) // await //
+    
+const apiFunction = async () => {
+    const res = await fetch('https://api.escuelajs.co/api/v1/users/');
+    const jData = await res.json();
+    console.log(jData);
+    return jData;
+}
+apiFunction();
 
+
+const apiFunction = async () => {
+    const response = await fetch('https://api.escuelajs.co/api/v1/users/');
+    const jData = await response.json();
+    return jData;
+}
+const secFunction = async () => {
+    const jsonData = await apiFunction();
+    console.log(jsonData);
+}
+secFunction();
+
+
+const getAllEmails = async () => {
+    const response = await fetch('https://api.escuelajs.co/api/v1/users/');
+    const jData = await response.json();
+
+    const emails = jData.map(user => {
+        return user.email;
+    })
+    // return emails; //promise pending 
+    console.log(emails);
+}
+getAllEmails();
+// console.log(getAllEmails()); /promise pending 
+
+
+const getAllEmails = async () => {
+    const res = await fetch('https://api.escuelajs.co/api/v1/users/');
+    const jData = await res.json();
+
+    const usermails = jData.map(user => {
+        return user.email;
+    });
+    // const mails = jData.map(user => user.email || "No email available");
+
+    display(usermails);
+}
+const display = (data) => {
+    console.log(data);
+}
+getAllEmails();
+
+
+//2nd parameter of fetch is object //
+const getAllEmails = async () => {
+    const response = await fetch('https://api.escuelajs.co/api/v1/users/',{
+        method: "GET",
+        headers: {
+            'Content-Type': "application/json",
+        }
+    });
+    const jData = await response.json();
+    console.log(jData);
+}
+getAllEmails();
+
+
+//post type// 
+const joke = {  //create object
+    id: "12345678",
+    joke: "What do you call a bear with no teeth?",
+}
+
+const jokeObject = async () => {
+    const response = await fetch('https://api.escuelajs.co/api/v1/users/', {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(joke)
+    });
+    const jsonResponse = await response.json();
+
+    console.log(jsonResponse);
+}
+jokeObject();
