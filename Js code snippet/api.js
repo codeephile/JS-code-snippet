@@ -20,17 +20,29 @@
 //     });
 
 
-// // json format convert to javascript to enable read //
+// json format convert to javascript to enable read //
+// e.g 1//
 // fetch('http://example.com/api/users')
 //     .then(res => res.json()) //json to normal javascript //
 //     .then(data => {
 //         console.log(data); //this is parsed json to display javascript//
 //     }); 
 
+// e.g 2 //
+// fetch("https://example.com/api/")
+//     .then(response => {
+//         return response.json();
+//     })
+//     .then(data =>{
+//         // console.log(data); //grab data out of the api
+//         data.forEach(user => {
+//             console.log(user); 
+//         })
+//     });
 ------------------------------------------------------
 // simple api (get)// .then() //
 
-// const apiUrl = 'https://fakestoreapi.com/products';
+// const apiUrl = 'https://example.com/api';
 // fetch(apiUrl)
 // .then(response => {
 //     if(!response.ok){
