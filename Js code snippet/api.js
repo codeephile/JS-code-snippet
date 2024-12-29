@@ -132,6 +132,36 @@ fetch(`${deleteApi}${userId}`, {
     });
 
 
+// UPDATE //
+const api = 'https://api.esceulajs.co/api/v1/users/';
+const userId = 1;
+const updateUser = {
+    "name": "pokemon",
+    "email": "poke@email.com",
+    "password": "12345678",
+    "avatar": "https://picsum.photos/800",
+};
+
+fetch(api + userId, {
+    method: "PUT",
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(updateUser),
+})
+    .then(response => {
+        if(!response.ok){
+            throw new Error(`Error: ${response}`);
+        }else{
+            return response.json();
+        }
+    })
+    .then(data => {
+        console.log("Updated: ", data)
+    })
+    .catch(error => {
+        console.error('Error: ', error.message)
+    });
 -----------------------------------------------------
 // simple api (get) // await
 
