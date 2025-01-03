@@ -185,19 +185,6 @@ fetch(api + userId, {
 // }
 // apiFunction();
 
-
-const apiFunction = async () => {
-    const response = await fetch('https://api.escuelajs.co/api/v1/users/');
-    const jData = await response.json();
-    return jData;
-}
-const secFunction = async () => {
-    const jsonData = await apiFunction();
-    console.log(jsonData);
-}
-secFunction();
-
-
 const getAllEmails = async () => {
     const response = await fetch('https://api.escuelajs.co/api/v1/users/');
     const jData = await response.json();
@@ -242,23 +229,4 @@ const getAllEmails = async () => {
 }
 getAllEmails();
 
-
-//post type// 
-const joke = {  //create object
-    id: "12345678",
-    joke: "What do you call a bear with no teeth?",
-}
-
-const jokeObject = async () => {
-    const response = await fetch('https://api.escuelajs.co/api/v1/users/', {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(joke)
-    });
-    const jsonResponse = await response.json();
-
-    console.log(jsonResponse);
-}
-jokeObject();
+-----------------------------------------------------------
