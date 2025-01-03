@@ -1,45 +1,61 @@
-//api fetch async/callback //
-
-// function fetchData(url, options) {
-//   // options can be an object containing headers, method, etc.
-// }
-// fetchData("https://api.example.com", { method: "GET", headers: { "Content-Type": "application/json" } });
-
------------------------------------------------------
 // fetch api // syntax //
+
 // fetch('http//www.example.com/api/')
 //     .then(res => res.json())
 //     .then(data => console.log(data))
 // .catch(error => console.log('ERROR'))
 
-
-// simple call api//
-// fetch('http://example.com/api/users')
-//     .then(res => {
-//         console.log(res);
-//     });
-
-
-// json format convert to javascript to enable read //
-// e.g 1//
-// fetch('http://example.com/api/users')
-//     .then(res => res.json()) //json to normal javascript //
-//     .then(data => {
-//         console.log(data); //this is parsed json to display javascript//
-//     }); 
-
-// e.g 2 //
-// fetch("https://example.com/api/")
-//     .then(response => {
-//         return response.json();
-//     })
-//     .then(data =>{
-//         // console.log(data); //grab data out of the api
-//         data.forEach(user => {
-//             console.log(user); 
-//         })
-//     });
 ------------------------------------------------------
+// fullfilled state // 
+
+// const promise = new Promise((resolve, reject) => {
+//     const error = true;
+//     if(!error){
+//         resolve('Success'); // The promise is fulfilled with the value "Success"
+//     }else{
+//         reject('Error Rejected');
+//     }
+// });
+// console.log(promise);
+
+// promise
+// .then(value => {
+//     return value + ' and this is testing';
+// })
+// .then(newValue => {
+//     console.log(newValue);
+// })
+// .catch(error => {
+//     console.error(error);
+// })
+
+
+// pending state //
+
+// const promise = new Promise((resolve, reject) => {
+//     const error = false;
+//     if(!error){
+//         console.log("First Resolved promise!!!");
+//     }else{
+//         console.log("Rejected Promise!!!");
+//     }
+// });
+
+// const secPromise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("Second Time Promise!!!");
+//     },1500)
+// });
+//  //call both upper promise
+// secPromise.then(value => {
+//     console.log(value);
+// });
+
+// promise.then(value => {
+//     console.log(value);
+// })
+
+---------------------------------------------------------
 // simple api (get)// .then() //
 
 // const apiUrl = 'https://example.com/api';
@@ -57,8 +73,7 @@
 //     console.error('Error fetching: ', error);
 // });
 
-
-
+//e.g 2//
 // fetch('https://fakestoreapi.com/products/5')
 //     .then(res => {
 
@@ -74,8 +89,6 @@
 //     .catch(error => {
 //         console.log("Error: ", error.message);
 //     });
-
-
 
 ------------------------------------------------------
 // POST (create) //
