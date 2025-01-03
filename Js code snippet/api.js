@@ -177,13 +177,13 @@ fetch(api + userId, {
 -----------------------------------------------------
 // simple api (get) // await //
     
-const apiFunction = async () => {
-    const res = await fetch('https://api.escuelajs.co/api/v1/users/');
-    const jData = await res.json();
-    console.log(jData);
-    return jData;
-}
-apiFunction();
+// const apiFunction = async () => {
+//     const res = await fetch('https://api.escuelajs.co/api/v1/users/');
+//     const jData = await res.json();
+//     console.log(jData);
+//     return jData;
+// }
+// apiFunction();
 
 
 const apiFunction = async () => {
