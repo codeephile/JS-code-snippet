@@ -6,57 +6,7 @@
 // .catch(error => console.log('ERROR'))
 
 ------------------------------------------------------
-// fullfilled state // 
-
-// const promise = new Promise((resolve, reject) => {
-//     const error = true;
-//     if(!error){
-//         resolve('Success'); // The promise is fulfilled with the value "Success"
-//     }else{
-//         reject('Error Rejected');
-//     }
-// });
-// console.log(promise);
-
-// promise
-// .then(value => {
-//     return value + ' and this is testing';
-// })
-// .then(newValue => {
-//     console.log(newValue);
-// })
-// .catch(error => {
-//     console.error(error);
-// })
-
-
-// pending state //
-
-// const promise = new Promise((resolve, reject) => {
-//     const error = false;
-//     if(!error){
-//         console.log("First Resolved promise!!!");
-//     }else{
-//         console.log("Rejected Promise!!!");
-//     }
-// });
-
-// const secPromise = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         resolve("Second Time Promise!!!");
-//     },1500)
-// });
-//  //call both upper promise
-// secPromise.then(value => {
-//     console.log(value);
-// });
-
-// promise.then(value => {
-//     console.log(value);
-// })
-
----------------------------------------------------------
-// simple api (get)// .then() //
+// api using // .then() //
 
 // const apiUrl = 'https://example.com/api';
 // fetch(apiUrl)
@@ -188,7 +138,7 @@ fetch(api + userId, {
         console.error('Error: ', error.message)
     });
 -----------------------------------------------------
-// simple api (get) // await //
+// api using async await //
     
 // const apiFunction = async () => {
 //     const res = await fetch('https://api.escuelajs.co/api/v1/users/');
@@ -209,25 +159,6 @@ const getAllEmails = async () => {
     console.log(emails);
 }
 getAllEmails();
-// console.log(getAllEmails()); /promise pending 
-
-
-const getAllEmails = async () => {
-    const res = await fetch('https://api.escuelajs.co/api/v1/users/');
-    const jData = await res.json();
-
-    const usermails = jData.map(user => {
-        return user.email;
-    });
-    // const mails = jData.map(user => user.email || "No email available");
-
-    display(usermails);
-}
-const display = (data) => {
-    console.log(data);
-}
-getAllEmails();
-
 
 //2nd parameter of fetch is object //
 const getAllEmails = async () => {
