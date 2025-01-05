@@ -174,3 +174,74 @@ const getAllEmails = async () => {
 getAllEmails();
 
 -----------------------------------------------------------
+// try catch //
+const getApi = async () => {
+    try{
+        const api = await fetch('https://api.escuelajs.co/api/v1/users/', {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        if(!api.ok){
+            throw new Error(`Fetching Error: ${api.status}`);
+        }else{
+            const jData = await api.json();
+            console.log("Data Received: ", jData);
+        }
+    }catch(error){
+        console.error('Something went wrong: ', error.message);
+    }
+}
+getApi();
+
+
+const addNew = {
+    name: "pikachu",
+    email: "pikachu@email.com",
+    password: "12345",
+    avatar: "https://picsum.photos/800",
+};
+
+const postApi = async () => {
+    try{
+        const api = await fetch('https://api.escuelajs.co/api/v1/users/', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            }, 
+            body: JSON.stringify(addNew),
+        })
+        if(!api.ok){
+            throw new Error(`Fetching Error: ${api.status}`);
+        }
+        const data = await api.json();
+        console.log(data);
+    }catch(error){
+        console.error('Something went wrong: ', error.message);
+    }
+}
+postApi();
+
+
+const deleteApi = async (userId) => {
+    try{
+        const api = await fetch(`https://api.escuelajs.co/api/v1/users/${userId}`, {
+            method: "DELETE",
+            headers: {
+                'content-type': 'application/json',
+            }
+        });
+        if(!api.ok){
+            throw new Error(`Deleting Error: ${api}`);
+        }else{
+            const jsonData = await api.json();
+            console.log("Deleted Data: ", jsonData);
+        }
+    }catch(error){
+        console.error('Error: ', error.message);
+    }
+}
+deleteApi(4);
+
+-----------------------------------------------------------
